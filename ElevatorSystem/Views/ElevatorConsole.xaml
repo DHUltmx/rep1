@@ -1,0 +1,58 @@
+﻿<Window x:Class="ElevatorSystem.UI.Views.ElevatorConsole"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ElevatorSystem.UI.ViewModel"                   
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400"
+             Title="Elevator" 
+		    SizeToContent="WidthAndHeight"
+		    Margin="3"
+		    Padding="3" 
+		    ResizeMode="NoResize"
+			d:DataContext="{d:DesignInstance local:ElevatorConsoleViewmodel}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="131"/>
+            <ColumnDefinition Width="Auto" MinWidth="131" />
+            <ColumnDefinition Width="Auto" MinWidth="132" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"  />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Name="txtFloorDisplay" Text="{Binding Path=FloorDisplay, UpdateSourceTrigger=PropertyChanged}" 
+               Background="Gray" FontSize="36" TextAlignment="Center" Margin="4,10" />
+       
+        <ComboBox Grid.Row="1" Grid.Column="0" Name="Floor" Margin="4,10" Style="{StaticResource comboStyle}"
+                  ItemsSource="{Binding Path=CalledFloor, Converter={StaticResource FloorSelectorConverter}}" SelectionChanged="Floor_SelectionChanged" />
+        <Button Grid.Row="1" Grid.Column="1" Content="Up" Command="{Binding GoUpCommand}" Margin="4,10" Style="{StaticResource buttonStyle}"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="Down" Command="{Binding GoDownCommand}" Margin="4,10" Style="{StaticResource buttonStyle}"/>
+
+        <Button Content="G" Grid.Row="2" Grid.Column="1" Margin="3" Command="{Binding FloorCommand}" CommandParameter="0" Style="{StaticResource buttonStyle}" />
+
+        <Button Content="1" Grid.Row="3" Grid.Column="0" Margin="3" Command="{Binding FloorCommand}" CommandParameter="1" Style="{StaticResource buttonStyle}"/>
+        <Button Content="2" Grid.Row="3" Grid.Column="1" Margin="3" Command="{Binding FloorCommand}" CommandParameter="2" Style="{StaticResource buttonStyle}"/>
+        <Button Content="3" Grid.Row="3" Grid.Column="2" Margin="3" Command="{Binding FloorCommand}" CommandParameter="3" Style="{StaticResource buttonStyle}"/>
+
+        <Button Content="4" Grid.Row="4" Grid.Column="0" Margin="3" Command="{Binding FloorCommand}" CommandParameter="4" Style="{StaticResource buttonStyle}"/>
+        <Button Content="5" Grid.Row="4" Grid.Column="1" Margin="3" Command="{Binding FloorCommand}" CommandParameter="5" Style="{StaticResource buttonStyle}"/>
+        <Button Content="6" Grid.Row="4" Grid.Column="2" Margin="3" Command="{Binding FloorCommand}" CommandParameter="6" Style="{StaticResource buttonStyle}"/>
+
+        <Button Content="7" Grid.Row="5" Grid.Column="0" Margin="3" Command="{Binding FloorCommand}" CommandParameter="7" Style="{StaticResource buttonStyle}"/>
+        <Button Content="8" Grid.Row="5" Grid.Column="1" Margin="3" Command="{Binding FloorCommand}" CommandParameter="8" Style="{StaticResource buttonStyle}"/>
+        <Button Content="9" Grid.Row="5" Grid.Column="2" Margin="3" Command="{Binding FloorCommand}" CommandParameter="9" Style="{StaticResource buttonStyle}"/>
+
+        <Button Content="10" Grid.Row="6" Grid.Column="0" Margin="3" Command="{Binding FloorCommand}" CommandParameter="10" Style="{StaticResource buttonStyle}"/>
+        <Button Content="11" Grid.Row="6" Grid.Column="1" Margin="3" Command="{Binding FloorCommand}" CommandParameter="11" Style="{StaticResource buttonStyle}"/>
+        <Button Content="12" Grid.Row="6" Grid.Column="2" Margin="3" Command="{Binding FloorCommand}" CommandParameter="12" Style="{StaticResource buttonStyle}"/>
+
+    </Grid>
+</Window>

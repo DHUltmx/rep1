@@ -1,0 +1,11 @@
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\bin\Debug\ElevatorSystem.Tests.dll
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\bin\Debug\ElevatorSystem.Tests.pdb
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\bin\Debug\ElevatorSystem.Domain.dll
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\bin\Debug\nunit.framework.dll
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\bin\Debug\ElevatorSystem.Domain.pdb
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\bin\Debug\nunit.framework.xml
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\obj\Debug\ElevatorSystem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\obj\Debug\ElevatorSystem.Tests.dll
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\obj\Debug\ElevatorSystem.Tests.pdb
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\bin\Debug\ElevatorSystem.UI.exe
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Tests\bin\Debug\ElevatorSystem.UI.pdb

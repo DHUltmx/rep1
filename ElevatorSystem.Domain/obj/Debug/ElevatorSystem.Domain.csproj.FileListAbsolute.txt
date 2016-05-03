@@ -1,0 +1,5 @@
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Domain\bin\Debug\ElevatorSystem.Domain.dll
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Domain\bin\Debug\ElevatorSystem.Domain.pdb
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Domain\obj\Debug\ElevatorSystem.Domain.csprojResolveAssemblyReference.cache
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Domain\obj\Debug\ElevatorSystem.Domain.dll
+C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem.Domain\obj\Debug\ElevatorSystem.Domain.pdb

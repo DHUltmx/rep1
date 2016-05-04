@@ -72,27 +72,7 @@ namespace ElevatorSystem.UI.Commands
         /// <param name="parameter">The parameter.</param>
         public void ExecuteFloor(object parameter)
         {
-            int requestedFloor = Convert.ToInt32(parameter);
-            ElevatorStatus status;
-
-            if (requestedFloor < this._viewModel.Elevator.CurrentFloor)
-            {
-                status = ElevatorStatus.Down;
-            }
-            else
-            {
-                if (requestedFloor > this._viewModel.Elevator.CurrentFloor)
-                {
-                    status = ElevatorStatus.Up;
-                }
-                else
-                {
-                    status = ElevatorStatus.DoorsOpen;
-                }
-            }
-
-            ElevatorRequest request = new ElevatorRequest(requestedFloor, status);
-            this._viewModel.Elevator.CurrentRequests.Add(request);
+            ElevatorStatus status = _viewModel.FloorRequest(Convert.ToInt32(parameter));
 
             Action elevatorTravel = new Action(() =>
             {

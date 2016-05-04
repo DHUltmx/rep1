@@ -16,3 +16,21 @@ C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSyst
 C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem\obj\Debug\ElevatorSystem.UI.pdb
 C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\David\documents\visual studio 2015\Projects\ElevatorSystem\ElevatorSystem\obj\Debug\App.baml
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\bin\Debug\ElevatorSystem.UI.exe.config
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\ElevatorSystem.UI.exe
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\ElevatorSystem.UI.pdb
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\bin\Debug\ElevatorSystem.UI.exe
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\bin\Debug\ElevatorSystem.UI.pdb
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\bin\Debug\ElevatorSystem.Domain.dll
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\bin\Debug\ElevatorSystem.Domain.pdb
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\ElevatorSystem.UI.csprojResolveAssemblyReference.cache
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\Views\ElevatorConsole.g.cs
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\App.g.cs
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\ElevatorSystem.UI_MarkupCompile.cache
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\ElevatorSystem.UI_MarkupCompile.lref
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\App.baml
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\Views\ElevatorConsole.baml
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\ElevatorSystem.UI.g.resources
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\ElevatorSystem.UI.Properties.Resources.resources
+C:\Users\David\Documents\GitHub\CodingAssignmentDavidHewison\ElevatorSystem\obj\Debug\ElevatorSystem.UI.csproj.GenerateResource.Cache

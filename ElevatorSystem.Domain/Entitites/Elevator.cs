@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.IO;
 
 namespace ElevatorSystem.Domain.Entitites
 {
@@ -13,12 +9,11 @@ namespace ElevatorSystem.Domain.Entitites
     /// </summary>
     public class Elevator
     {
-        private const int _maxFloors = 12;
+        private const int MAXFLOORS = 12;
         private int _currentFloor;
         private ElevatorStatus _currentStatus;        
         private IList<ElevatorRequest> _currentRequests;
-        //public StreamWriter sw;       
-
+     
         /// <summary>
         /// A collection of all current requests created from elevator calls or requests from within the elevator.
         /// </summary>
@@ -61,11 +56,13 @@ namespace ElevatorSystem.Domain.Entitites
         /// </value>
         public int MaxFloors
         {
-            get { return _maxFloors; }
+            get { return MAXFLOORS; }
         }
 
         public event FloorChanged CurrentFloorChanged;
         public delegate void FloorChanged(int currentFloor);
+
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Elevator"/> class.
@@ -75,9 +72,11 @@ namespace ElevatorSystem.Domain.Entitites
             _currentRequests = new List<ElevatorRequest>();
             _currentStatus = ElevatorStatus.DoorsOpen;
             _currentFloor = 0;
-            //sw = new StreamWriter(@"c:\temp\log.txt");
-
         }
+
+        #endregion
+
+        #region public methods
 
         /// <summary>
         /// Moves the elevator up or down dependent on the current requests.
@@ -100,7 +99,7 @@ namespace ElevatorSystem.Domain.Entitites
                             }
                             
                             break;
-                        case (_maxFloors):
+                        case (MAXFLOORS):
                             request = GetNextDownRequest();
 
                             if (request != null)
@@ -150,11 +149,9 @@ namespace ElevatorSystem.Domain.Entitites
             }
         }
 
-        //public void CloseLog()
-        //{
-        //    sw.Close();
-        //}
+        #endregion
 
+        #region private methods
 
         /// <summary>
         /// Moves the elevator up.
@@ -168,13 +165,6 @@ namespace ElevatorSystem.Domain.Entitites
                 CurrentFloor++;
                 CurrentFloorChanged(_currentFloor);
                 ElevatorRequest interimRequest = GetNextUpRequest();
-
-                //sw.Write(string.Format("Queue length:{0}{1}", _currentRequests.Count, Environment.NewLine));
-               
-                //if (interimRequest != null)
-                //{
-                //    sw.Write(string.Format("{0} - RequestedFloor:{1} CurrentFloor:{2}{3}", DateTime.Now, interimRequest.RequestedFloor, _currentFloor, Environment.NewLine));
-                //}
                 
                 if (interimRequest != null && interimRequest.RequestedFloor == _currentFloor)
                 {
@@ -200,14 +190,7 @@ namespace ElevatorSystem.Domain.Entitites
                 CurrentFloor--;
                 CurrentFloorChanged(_currentFloor);
                 ElevatorRequest interimRequest = GetNextDownRequest();
-
-                //sw.Write(string.Format("Queue length:{0}{1}", _currentRequests.Count, Environment.NewLine));
-
-                //if (interimRequest != null)
-                //{
-                //    sw.Write(string.Format("{0} - RequestedFloor:{1} CurrentFloor:{2}{3}", DateTime.Now, interimRequest.RequestedFloor, _currentFloor, Environment.NewLine));
-                //}
-
+  
                 if (interimRequest != null && interimRequest.RequestedFloor == _currentFloor)
                 {
                     request = interimRequest;
@@ -241,6 +224,8 @@ namespace ElevatorSystem.Domain.Entitites
                                                     .OrderByDescending(x => x.RequestedFloor)
                                                     .FirstOrDefault();
         }
+
+        #endregion
     }
 
 

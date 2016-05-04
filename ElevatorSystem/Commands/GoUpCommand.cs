@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ElevatorSystem.UI.ViewModel;
+﻿using ElevatorSystem.UI.ViewModel;
 using ElevatorSystem.UI.Views;
-using ElevatorSystem.Domain.Entitites;
-using System.Threading;
+using System;
+using System.Threading.Tasks;
 using System.Windows.Threading;
-using System.Windows.Input;
+
 
 namespace ElevatorSystem.UI.Commands
 {
@@ -57,7 +52,7 @@ namespace ElevatorSystem.UI.Commands
 
                 _viewModel.Elevator.CurrentFloorChanged += Elevator_CurrentFloorChanged;
             }              
-        }
+        }      
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GoUpCommand"/> class.
@@ -73,10 +68,8 @@ namespace ElevatorSystem.UI.Commands
         /// <param name="unused">The unused.</param>
         public void ExecuteGoUp(object unused)
         {
-            //create up request...
-            ElevatorRequest request = new ElevatorRequest(this.ViewModel.SelectedFloor, ElevatorStatus.Up);
-            _viewModel.Elevator.CurrentRequests.Add(request);
-           
+            _viewModel.GoUp();
+         
             Action elevatorTravel = new Action(() =>
             {
                 _view.txtFloorDisplay.Dispatcher.BeginInvoke(DispatcherPriority.Background,
@@ -120,10 +113,6 @@ namespace ElevatorSystem.UI.Commands
         {
             _view.txtFloorDisplay.Dispatcher.Invoke(DispatcherPriority.Background,
                     new Action(() => { _view.txtFloorDisplay.Text = currentFloor.ToString(); }));
-            
-            //TODO: neither comment forces execution of method 
-            _viewModel.GoDownCommand.CanExecute(null);
-            CommandManager.InvalidateRequerySuggested();      
-        }
+        }     
     }
 }

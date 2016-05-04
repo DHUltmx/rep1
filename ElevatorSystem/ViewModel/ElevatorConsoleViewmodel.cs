@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
+﻿using ElevatorSystem.Domain.Entitites;
 using System.Collections.ObjectModel;
-using ElevatorSystem.Domain.Entitites;
+using System.ComponentModel;
 using System.Windows.Input;
-using System.Threading;
-using System.Windows.Threading;
 
 namespace ElevatorSystem.UI.ViewModel
 {
@@ -122,7 +115,55 @@ namespace ElevatorSystem.UI.ViewModel
             if (this.PropertyChanged != null)
             {
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }           
+        }
+
+        internal void GoUp()
+        {
+            //create up request...
+            ElevatorRequest request = new ElevatorRequest(this.SelectedFloor, ElevatorStatus.Up);
+            this.Elevator.CurrentRequests.Add(request);
+        }
+
+        internal void GoDown()
+        {
+            ElevatorRequest request = new ElevatorRequest(this.SelectedFloor, ElevatorStatus.Down);
+            this.Elevator.CurrentRequests.Add(request);
+        }
+
+        internal ElevatorStatus FloorRequest(int requestedFloor)
+        {
+            ElevatorStatus status;
+
+            if (requestedFloor < this.Elevator.CurrentFloor)
+            {
+                status = ElevatorStatus.Down;
             }
+            else
+            {
+                if (requestedFloor > this.Elevator.CurrentFloor)
+                {
+                    status = ElevatorStatus.Up;
+                }
+                else
+                {
+                    status = ElevatorStatus.DoorsOpen;
+                }
+            }
+
+            ElevatorRequest request = new ElevatorRequest(requestedFloor, status);
+            this.Elevator.CurrentRequests.Add(request);
+            return status;
+        }
+
+        /// <summary>
+        /// To force the CanExecute methods.
+        /// </summary>
+        internal void Requery()
+        {
+            //TODO: this run on UI thread but neither working.
+            CommandManager.InvalidateRequerySuggested();
+            GoDownCommand.CanExecute(null);
         }
     }
 }

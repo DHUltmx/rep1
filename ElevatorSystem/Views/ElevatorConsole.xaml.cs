@@ -43,6 +43,6 @@ namespace ElevatorSystem.UI.Views
             {
                 ViewModel.SelectedFloor = Convert.ToInt32(Floor.SelectedItem.ToString());
             }
-        }
+        }        
     }
 }

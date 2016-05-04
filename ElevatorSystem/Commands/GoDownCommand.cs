@@ -1,14 +1,8 @@
-﻿using ElevatorSystem.Domain.Entitites;
-using ElevatorSystem.UI.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using ElevatorSystem.UI.ViewModel;
 using ElevatorSystem.UI.Views;
+using System;
+using System.Threading.Tasks;
 using System.Windows.Threading;
-using System.Windows.Input;
 
 namespace ElevatorSystem.UI.Commands
 {
@@ -73,8 +67,7 @@ namespace ElevatorSystem.UI.Commands
         /// <param name="unused">The unused.</param>
         public void ExecuteGoDown(object unused)
         {
-            ElevatorRequest request = new ElevatorRequest(this.ViewModel.SelectedFloor, ElevatorStatus.Down);
-            _viewModel.Elevator.CurrentRequests.Add(request);
+            _viewModel.GoDown();
 
             Action elevatorTravel = new Action(() =>
             {
